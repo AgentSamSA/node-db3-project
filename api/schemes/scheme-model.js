@@ -58,9 +58,9 @@ function remove(id) {
     if (!schemeObj) {
         return Promise.resolve(null);
     } else {
-        return db('schemes').where('id', id).first()
-            .then(([id]) => {
-                return db('schemes').where('id', id).del();
-            });
+        return db('schemes').where('id', id).del()
+        // .then(([id]) => {
+        //     return db('schemes').where('id', id).first();
+        // });
     }
 }
